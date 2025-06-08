@@ -1,8 +1,8 @@
 package com.nttdata.testing.questions;
 
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.rest.questions.LastResponse;
 
 public class ResponseCode implements Question<Integer> {
 
@@ -12,6 +12,6 @@ public class ResponseCode implements Question<Integer> {
 
     @Override
     public Integer answeredBy(Actor actor) {
-        return SerenityRest.lastResponse().statusCode();
+        return LastResponse.received().answeredBy(actor).statusCode();
     }
 }
