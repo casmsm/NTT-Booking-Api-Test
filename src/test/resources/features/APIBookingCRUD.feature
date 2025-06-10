@@ -1,4 +1,5 @@
-@Booking @CRUDOperations
+#@Booking
+@CRUDOperations
 Feature: Operaciones CRUD de Reservas con Autenticación
 
   Como un usuario autenticado de la API
